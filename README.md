@@ -3,13 +3,11 @@
 
 
 ### Sign up Interface
-<img src="./app/assets/images/1.JPG" width="1200px" height="450px" />
+<img src="./app/assets/images/1.png"/>
 
 ### Index
-<img src="./app/assets/images/2.JPG" width="1200px" height="450px" />
+<img src="./app/assets/images/2.png" />
 
-### Dashboard
-<img src="./app/assets/images/3.JPG" width="1200px" height="450px" />
 
 ## Built With
 
@@ -30,13 +28,14 @@ In order to run, you need to install RUBY and Rails in your computer. For window
 Clone this project by typing ```git clone https://github.com/KennyUTN/eventbrite-clone```
 
 ### Run app
+- Open terminal.
 - Type ```bundle install``` in the root file of the project.
 - Type  ```rails db:migrate``` in the root file of the project.
 - Type ```rails s``` in the root file of the project.
 - Goto [local host](http://localhost:3000/)
 
 ### Test instructions
-- Go to the root directory of the project and open CLI
+- Go to the root directory of the project and open the terminal
 - Type ```bundle exec rspec```
 - Get a report from the test.
 
