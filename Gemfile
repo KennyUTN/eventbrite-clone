@@ -52,7 +52,6 @@ group :test do
   gem 'webdrivers'
 end
 group :development, :test do
-  gem 'byebug', platform: :mri
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
