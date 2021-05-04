@@ -12,10 +12,12 @@ module EventsHelper
                                                         class: 'button is-danger has-text-white'
     end
   end
+
   def delete(event)
-      return unless user_signed_in? && current_user.id == event.user_id
-      link_to 'Delete Event', event,
-              method: :delete,
-              class: 'button is-danger has-text-white mx-1'
-    end
+    return unless user_signed_in? && current_user.id == event.user_id
+
+    link_to 'Delete Event', event,
+            method: :delete,
+            class: 'button is-danger has-text-white mx-1'
+  end
 end

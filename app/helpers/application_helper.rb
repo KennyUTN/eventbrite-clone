@@ -14,6 +14,7 @@ module ApplicationHelper
   def sign_up
     link_to 'Sign Up', new_user_registration_path, class: 'control button is-info' unless user_signed_in?
   end
+
   def user_events_helper
     link_to 'My Events', user_path(current_user.id), class: 'control button is-info' if user_signed_in?
   end
