@@ -1,3 +1,4 @@
+# rubocop:disable Style/GuardClause
 module EventsHelper
   def event_attend_helper
     unless user_signed_in? && @attendees.where(id: current_user.id).exists?
@@ -21,3 +22,4 @@ module EventsHelper
             class: 'button is-danger has-text-white mx-1'
   end
 end
+# rubocop:enable Style/GuardClause
