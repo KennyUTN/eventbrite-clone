@@ -14,8 +14,8 @@ module EventsHelper
   end
   def delete(event)
       return unless user_signed_in? && current_user.id == event.user_id
-      link_to 'Delete', event,
+      link_to 'Delete Event', event,
               method: :delete,
-              class: 'button is-danger has-text-white'
+              class: 'button is-danger has-text-white mx-1'
     end
 end

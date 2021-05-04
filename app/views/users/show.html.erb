@@ -1,4 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="row">
+  <div class="col-sm-6 auto-scroll-height border">
+    <h1>Upcoming events: <%=@upcoming_events.count%></h1>
+    <div class="col-lg-5 m-auto d-flex flex-column">
+      <div>
+        <%@upcoming_events.each do |event|%>
+          <%= link_to event_path(event), class:'text-decoration-none' do%>
+            <%=render event%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5 m-auto col-sm-6 auto-scroll-height border">
+    <h1>Past events: <%=@prev_events.count %></h1>
+    <div class="d-flex flex-column">
+      <div>
+        <%@prev_events.each do |event|%>
+          <%= link_to event_path(event), class:'text-decoration-none' do%>
+            <%=render event%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

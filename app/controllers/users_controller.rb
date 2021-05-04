@@ -11,8 +11,8 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @events_by_current_user = current_user.events
-    @upcoming_events = @user.attended_events.upcoming
-    @prev_events = @user.attended_events.previous
+    @upcoming_events = @events_by_current_user.upcoming
+    @prev_events = @events_by_current_user.past
   end
 
   # GET /users/new
