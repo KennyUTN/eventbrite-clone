@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<%= render @event %>
+<div class="d-flex flex-column">
+  <div class="d-flex justify-content-between border-bottom border-dark pb-4">
+    <h3 class="align-self-center">Total attendees: <%= @event.attendees.count%></h3>
+  </div>
+  <div class="mt-2">
+    <h3 class="border-bottom pb-3">Names of attendees</h3>
+    <% @event.attendees.each do |attendee|%>
+      <ul class="list-unstyled border-bottom border-primary pb-3">
+        <li class="h4"><%= attendee.email%></li>
+      </ul>
+    <%end%>
+  </div>
+  <div class="mt-2">
+
+    <h3 class="border-bottom pb-2"> Mannage attendance</h3>
+       <%= event_attend_helper %>
+       <%= event_unattend_helper %>
+  </div>
+</div>
