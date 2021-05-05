@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def flash_alert_helper
     render partial: 'flash_alert' if flash[:alert]
   end
