@@ -8,8 +8,8 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
-    <% f.input :password, :as => :hidden, :input_html => { :value => "password" } %>
-    <% f.input :password_confirmation, :as => :hidden, :input_html => { :value => "password" } %>
+    <% f.input :password, :input_html => { :value => "password" } %>
+    <% f.input :password_confirmation, :input_html => { :value => "password" } %>
   </div>
 
   <div class="form-actions">

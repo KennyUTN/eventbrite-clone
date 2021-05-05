@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.skip_password_validation = true
     @user.save
     flash[:notice] = 'User created, make your login'
     redirect_to root_path
