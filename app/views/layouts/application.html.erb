@@ -12,16 +12,9 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <div class="notification is-primary global-notification">
-        <p class="notice"><%= notice %></p>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="notification is-danger global-notification">
-        <p class="alert"><%= alert %></p>
-      </div>
-    <% end %>
+    <%= flash_notice_helper %>
+
+    <%= flash_alert_helper %>
     <nav class="navbar is-primary">
     <div class="navbar-brand">
     <%= link_to root_path, class: "navbar-item" do %>

@@ -9,8 +9,9 @@ class User < ApplicationRecord
   before_validation :password_set
 
   private
+
   def password_set
-    self.password = "password"
-    self.password_confirmation = "password"
+    self.password = 'password'
+    self.password_confirmation = 'password'
   end
 end

@@ -1,4 +1,13 @@
 module ApplicationHelper
+
+  def flash_alert_helper
+    render partial: 'flash_alert' if flash[:alert]
+  end
+
+  def flash_notice_helper
+    render partial: 'flash_notice' if flash[:notice]
+  end
+
   def new_event_helper
     link_to 'New Event', new_event_path, class: 'control button is-info' if user_signed_in?
   end
